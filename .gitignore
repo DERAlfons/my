@@ -1,0 +1,8 @@
+# Output of cabal configure
+/cabal.project.local
+
+# build
+/dist-newstyle
+
+# windows glue
+/install.bat

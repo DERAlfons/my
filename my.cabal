@@ -1,0 +1,27 @@
+cabal-version: >=1.10
+
+name:           my
+version:        0.0.0.1
+category:       Misc
+synopsis:       Collection of generally useful functions
+author:         Jascha Bakarinow
+maintainer:     jascha-bakarinow@web.de
+copyright:      Copyright (c) 2022 - 2023 Jascha Bakarinow
+license:        GPL-3.0-or-later
+license-file:   LICENSE.md
+description:
+  This package contains a collection of generally useful functions, so that they can easily be reused in different projects.
+
+build-type: Simple
+
+library
+  exposed-modules:
+    My.Util,
+    My.Parser,
+    My.Numbertheory
+	
+  build-depends:
+    base >=4.14 && <4.15,
+    regex-tdfa >=1.3.2
+	
+  default-language: Haskell2010
