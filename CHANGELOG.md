@@ -1,5 +1,12 @@
 # Revision history for my
 
+## 0.0.0.2 -- 2023-02-07
+
+Change implementation of parser:
+
+* make Parser an instance of Applicative
+* remove obsolete parser functions
+
 ## 0.0.0.1 -- 2022-12-14
 
 First version. Contains:
