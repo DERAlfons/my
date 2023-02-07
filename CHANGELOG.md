@@ -1,5 +1,12 @@
 # Revision history for my
 
+## 0.0.0.3 -- 2023-02-07
+
+Parser code refactor:
+
+* use do notation for Maybe in instantiation of Functor and Applicative for Parser
+* specify import of Alternative from Control.Applicative
+
 ## 0.0.0.2 -- 2023-02-07
 
 Change implementation of parser:
