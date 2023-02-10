@@ -1,5 +1,12 @@
 # Revision history for my
 
+## 0.0.0.4 -- 2023-02-10
+
+New functions in Util:
+
+* `sortAsc`: Sorts a list in ascending order. Just a different name for `sort` from `Data.List`
+* `sortDesc`: Sorts a list in descending order
+
 ## 0.0.0.3 -- 2023-02-07
 
 Parser code refactor:
