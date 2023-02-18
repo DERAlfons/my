@@ -8,7 +8,7 @@ where
 
 import Data.List (sort, sortBy)
 
-count :: Eq a => (a -> Bool) -> [a] -> Int
+count :: (a -> Bool) -> [a] -> Int
 count _ [] = 0
 count p (b : bs)
     | p b = 1 + count p bs
