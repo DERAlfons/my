@@ -1,5 +1,13 @@
 # Revision history for my
 
+## 0.0.0.6 -- 2023-02-18
+
+New function in Util:
+
+* `count`: Counts the number of elements in a list, which satisfy a given predicate
+
+Changed regex engine from TDFA to PCRE
+
 ## 0.0.0.5 -- 2023-02-18
 
 New function in Util:

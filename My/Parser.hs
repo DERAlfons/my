@@ -7,7 +7,7 @@ where
 import Data.Foldable (asum)
 import Control.Applicative (Alternative (..))
 import Control.Monad (mplus)
-import Text.Regex.TDFA ((=~), mrSubList, mrAfter)
+import Text.Regex.PCRE ((=~), mrSubList, mrAfter)
 
 newtype Parser a = Parser (String -> Maybe (a, String))
 
@@ -34,8 +34,8 @@ run (Parser p) = (fmap fst) . p
 
 parserRegex :: String -> ([String] -> a) -> Parser a
 parserRegex regex f = Parser (\s ->
-    if s =~ ("\\`" ++ regex) then
-        let mr = s =~ ("\\`" ++ regex) in
+    if s =~ ("^" ++ regex) then
+        let mr = s =~ ("^" ++ regex) in
         Just (f $ mrSubList mr, mrAfter mr)
     else
         Nothing)
