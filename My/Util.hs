@@ -1,5 +1,6 @@
 module My.Util (
     explode,
+    groupsOf,
     sortAsc,
     sortDesc)
 where
@@ -11,6 +12,12 @@ explode _ [] = []
 explode sep list = case break (== sep) list of
     (e, []) -> [e]
     (e, _ : rest) -> e : explode sep rest
+
+groupsOf :: Int -> [a] -> [[a]]
+groupsOf _ [] = []
+groupsOf n bs =
+    let (g, rest) = splitAt n bs in
+    g : groupsOf n rest
 
 sortAsc :: (Ord a) => [a] -> [a]
 sortAsc = sort

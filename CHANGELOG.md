@@ -1,5 +1,11 @@
 # Revision history for my
 
+## 0.0.0.5 -- 2023-02-18
+
+New function in Util:
+
+* `groupsOf`: Splits a list into multiple sublists of a given length
+
 ## 0.0.0.4 -- 2023-02-10
 
 New functions in Util:
