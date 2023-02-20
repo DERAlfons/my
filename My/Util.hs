@@ -3,7 +3,8 @@ module My.Util (
     explode,
     groupsOf,
     sortAsc,
-    sortDesc)
+    sortDesc,
+    maybeToIO)
 where
 
 import Data.List (sort, sortBy)
@@ -31,3 +32,7 @@ sortAsc = sort
 
 sortDesc :: (Ord a) => [a] -> [a]
 sortDesc = sortBy (flip compare)
+
+maybeToIO :: String -> Maybe a -> IO a
+maybeToIO _ (Just a) = return a
+maybeToIO errorMsg Nothing = fail errorMsg

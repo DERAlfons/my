@@ -1,5 +1,13 @@
 # Revision history for my
 
+## 0.0.0.7 -- 2023-02-20
+
+New function in Util:
+
+* `maybeToIO`: Create an `IO` action from a `Maybe` value, which returns `a` in
+  case of `Just a` and raises an exception with the given error message in case
+  of `Nothing`
+
 ## 0.0.0.6 -- 2023-02-18
 
 New function in Util:
