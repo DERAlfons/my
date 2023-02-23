@@ -1,7 +1,7 @@
 cabal-version: >= 1.10
 
 name:           my
-version:        0.0.0.7
+version:        0.0.0.8
 category:       Misc
 synopsis:       Collection of generally useful functions
 author:         Jascha Bakarinow

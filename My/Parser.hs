@@ -1,4 +1,5 @@
 module My.Parser (
+    Parser (Parser),
     run,
     parserRegex,
     parserList)
@@ -34,8 +35,8 @@ run (Parser p) = (fmap fst) . p
 
 parserRegex :: String -> ([String] -> a) -> Parser a
 parserRegex regex f = Parser (\s ->
-    if s =~ ("^" ++ regex) then
-        let mr = s =~ ("^" ++ regex) in
+    if s =~ ("(?-m)^" ++ regex) then
+        let mr = s =~ ("(?-m)^" ++ regex) in
         Just (f $ mrSubList mr, mrAfter mr)
     else
         Nothing)

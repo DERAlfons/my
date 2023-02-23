@@ -1,5 +1,12 @@
 # Revision history for my
 
+## 0.0.0.8 -- 2023-02-23
+
+Changes to Parser:
+
+* export `Parser`
+* disable multiline mode in `parserRegex`
+
 ## 0.0.0.7 -- 2023-02-20
 
 New function in Util:
