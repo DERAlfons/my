@@ -4,10 +4,13 @@ module My.Util (
     groupsOf,
     sortAsc,
     sortDesc,
+    sortAscOn,
+    sortDescOn,
     maybeToIO)
 where
 
-import Data.List (sort, sortBy)
+import Data.Function (on)
+import Data.List (sort, sortBy, sortOn)
 
 count :: (a -> Bool) -> [a] -> Int
 count _ [] = 0
@@ -32,6 +35,12 @@ sortAsc = sort
 
 sortDesc :: (Ord a) => [a] -> [a]
 sortDesc = sortBy (flip compare)
+
+sortAscOn :: (Ord b) => (a -> b) -> [a] -> [a]
+sortAscOn = sortOn
+
+sortDescOn :: (Ord b) => (a -> b) -> [a] -> [a]
+sortDescOn f = sortBy (flip compare `on` f)
 
 maybeToIO :: String -> Maybe a -> IO a
 maybeToIO _ (Just a) = return a

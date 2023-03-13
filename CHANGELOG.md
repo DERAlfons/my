@@ -1,5 +1,12 @@
 # Revision history for my
 
+## 0.0.0.9 -- 2023-03-13
+
+New functions in Util:
+
+* `sortAscOn`: Alias for `sortOn` from `Data.List`
+* `sortDescOn`: Similar to `sortOn`, but sorting is done in descending order.
+
 ## 0.0.0.8 -- 2023-02-23
 
 Changes to Parser:
