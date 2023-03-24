@@ -1,4 +1,6 @@
 module My.Util (
+    for,
+    applyN,
     count,
     explode,
     groupsOf,
@@ -11,6 +13,13 @@ where
 
 import Data.Function (on)
 import Data.List (sort, sortBy, sortOn)
+
+for :: [a] -> (a -> b) -> [b]
+for = flip map
+
+applyN :: Int -> (a -> a) -> a -> a
+applyN 0 _ x = x
+applyN n f x = applyN (n - 1) f (f x)
 
 count :: (a -> Bool) -> [a] -> Int
 count _ [] = 0

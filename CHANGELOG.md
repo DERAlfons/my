@@ -1,5 +1,12 @@
 # Revision history for my
 
+## 0.0.0.10 -- 2023-02-24
+
+New functions in Util:
+
+* `for`: `map` with flipped arguments
+* `applyN`: Recursively applies a function n times
+
 ## 0.0.0.9 -- 2023-03-13
 
 New functions in Util:
