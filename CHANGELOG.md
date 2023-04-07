@@ -1,5 +1,9 @@
 # Revision history for my
 
+## 0.0.1.0 -- 2023-04-07
+
+Shift versioning one place to the left
+
 ## 0.0.0.10 -- 2023-02-24
 
 New functions in Util:
